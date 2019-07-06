@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+
+<h2>{{name}}</h2>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste {{firstName}}</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang{{lastName}}</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td *ngIf= "showDetails">Laughing Bacchus Winecellars</td>
+    <td *ngIf= "showDetails">Yoshi Tannamuri</td>
+    <td *ngIf= "showDetails">Canada</td>
+  </tr>
+  <tr>
+    <td *ngIf= "showDetails">Magazzini Alimentari Riuniti</td>
+    <td *ngIf= "showDetails">Giovanni Rovelli</td>
+    <td *ngIf= "showDetails">Italy{{number}}</td>
+  </tr>
+</table>
+<button (click)="toggleDetails()">{{showDetails?'Hide':'Show'}} Details</button>
+<br><br>
+
+</body>
+</html>

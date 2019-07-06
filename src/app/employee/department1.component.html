@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+            <th>Emp Code</th>
+        <th>name</th>
+        <th>age</th>
+        <th>gender</th>
+        <th>annualSalary</th>
+        <th>dateOfBirth</th>
+        <th>index</th>
+        <th>first</th>
+        <th>last</th>
+        <th>Odd</th>
+        <th>Even</th>
+
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees; trackBy: trackByEmpCode, let i=index; let isFirst = first; let isLast= last, let isOdd = odd; let isEven= even; ">
+            <td>{{employee.code | uppercase}}</td>
+        <td>{{employee.name }}</td>
+        <td>{{employee.age}}</td>
+        <td>{{employee.gender}}</td>
+        <td>{{employee.annualSalary}}</td>
+        <td>{{employee.dateOfBirth | date: 'dd/MM/y'}}</td>
+        <td>{{i}}</td>
+        <td>{{isFirst}}</td>
+        <td>{{isLast}}</td>
+        <td>{{isOdd}}</td>
+        <td>{{isEven}}</td>
+       
+      </tr>
+      <tr *ngIf="!employees || employees.length ==0">
+
+        <td colspan=5>No record found</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button (click)= "getEmployees()">Refresh Employees</button>
+</div>
+
+</body>
+</html>
