@@ -6,8 +6,8 @@ import { TutorialsComponent } from './tutorials.component'
   selector: 'my-app',
 
 
-  // template: `
-  //  <my-dept></my-dept>`,
+  template: `
+   <my-dept></my-dept>`,
 
   // template: `<my-dept1></my-dept1>`,
 
@@ -26,15 +26,15 @@ import { TutorialsComponent } from './tutorials.component'
 
 // two way data binding 
 
-// template: `<input type="text" [value]= 'firstName' (input)="firstName=$event.target.value">
-//             <br />
-//             your name is: {{firstName}}
-// `
+/*template: `<input type="text" [value]= 'firstName' (input)="firstName=$event.target.value">
+            <br />
+            your name is: {{firstName}}
+` */
 
-// template: `<input type="text" [(ngModel)] ='firstName' >
-//             <br />
-//             your name is: {{firstName}}
-// `
+/* template: `<input type="text" [(ngModel)] ='firstName' >
+            <br />
+            your name is: {{firstName}}
+` */
 
 
 
